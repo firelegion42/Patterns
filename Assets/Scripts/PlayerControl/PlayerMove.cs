@@ -1,11 +1,19 @@
 using UnityEngine;
+using Zenject;
 
 public class PlayerMove : MonoBehaviour, IMoveable
 {
-    [SerializeField] private float _movementSpeed;
+    private float _movementSpeed;
 
     private Vector2 _moveInput;
     private Rigidbody rb;
+
+
+    [Inject]
+    private void Construct(Settings settings)
+    {
+        _movementSpeed = settings.movementSpeed;
+    }
 
     private void Start()
     {

@@ -1,10 +1,19 @@
 using UnityEngine;
+using Zenject;
 
 public class PlayerJump : MonoBehaviour, IJumpable 
 {
    
-    [SerializeField] private int _jumpForce;
-    [SerializeField] private LayerMask _groundMask;
+    private int _jumpForce;
+     private LayerMask _groundMask;
+
+
+    [Inject]
+    private void Construct(Settings settings)
+    {
+        _jumpForce = settings.jumpForce;
+        _groundMask = settings.groundMask;
+    }
 
     private Rigidbody rb;
     private bool _isGrounded;

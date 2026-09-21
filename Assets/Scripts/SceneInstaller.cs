@@ -4,10 +4,13 @@ using Zenject;
 
 public class SceneInstaller : MonoInstaller
 {
-    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private Settings settings;
+    
 
     public override void InstallBindings()
     {
-        Container.Bind<HealthBar>().FromInstance(_healthBar).AsSingle();
+        Container.Bind<Settings>().FromInstance(settings).AsSingle();
+
+        Container.Bind<PlayerGun>().FromComponentInHierarchy().AsSingle();
     }
 }
