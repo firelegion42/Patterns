@@ -10,6 +10,8 @@ public abstract class Health : MonoBehaviour
     public float CurrentHealth => _currentHealth;
     public bool Dead => _dead;
 
+    public float HealthPercent => _currentHealth / _maxHealth;
+
     [SerializeField] public UnityEvent<float> healthChanged;
     [SerializeField] public UnityEvent death;
 
