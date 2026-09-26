@@ -1,5 +1,5 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 
 public class SceneInstaller : MonoInstaller
@@ -15,6 +15,8 @@ public class SceneInstaller : MonoInstaller
         Container.Bind<Settings>().FromInstance(settings).AsSingle();
 
         Container.Bind<PlayerGun>().FromComponentInHierarchy().AsSingle();
+
+        Container.Bind<PlayerInput>().FromComponentInHierarchy().AsSingle();
 
         Container.BindFactory<BehaviourManager, ChasingEnemyFactory>().FromComponentInNewPrefab(_chasingEnemy);
 

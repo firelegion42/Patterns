@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour, IMoveable
     [Inject]
     private void Construct(Settings settings)
     {
-        _movementSpeed = settings.movementSpeed;
+        _movementSpeed = settings.playerMovementSpeed;
     }
 
     private void Start()

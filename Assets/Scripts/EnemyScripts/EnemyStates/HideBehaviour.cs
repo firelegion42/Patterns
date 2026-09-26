@@ -27,7 +27,7 @@ public class HideBehaviour : EnemyBehaviour
     {
         moveSpeedCoef = 0.5f;
 
-        agent.speed = moveSpeed * moveSpeedCoef;
+        agent.speed = _moveSpeed * moveSpeedCoef;
 
         Debug.Log("Entered Hide");
 

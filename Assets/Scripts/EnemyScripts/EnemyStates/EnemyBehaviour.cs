@@ -1,16 +1,27 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
+using Zenject;
 
 public abstract class EnemyBehaviour: MonoBehaviour, IBehaviour
 {
-    [SerializeField] protected AnimationCurve _utilityCurve;
-    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected AnimationCurve _utilityCurve;   
     [SerializeField] protected NavMeshAgent agent;
-    [SerializeField] protected Transform _player;
-    [SerializeField] protected float _radius;
+    protected float _moveSpeed;
+    protected Transform _player;
+    protected float _radius;
     protected BehaviourManager behaviourManager;
     
     protected float moveSpeedCoef;
+
+    [Inject]
+    private void Construct(PlayerInput player, Settings settings)
+    {
+        _player = player.transform;
+        _moveSpeed = settings.enemyMovementSpeed;
+        _radius = settings.searchRadius;
+
+    }
 
 
     public void Init(BehaviourManager behaviour)

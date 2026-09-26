@@ -151,8 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneInstaller
   settings: {fileID: 11400000, guid: 88a0ef5932feda347a583237262db1c8, type: 2}
   _chasingEnemy: {fileID: 2100204733230921452, guid: a7ff4f9a1f7ecc346b1f862d7df49dac, type: 3}
-  _patrolPoints: []
-  _hideTargets: []
+  _patrolPoints:
+  - {fileID: 1032264421}
+  - {fileID: 969467230}
+  _hideTargets:
+  - {fileID: 212090489}
+  - {fileID: 1823729760}
 --- !u!114 &30249312
 MonoBehaviour:
   m_ObjectHideFlags: 0

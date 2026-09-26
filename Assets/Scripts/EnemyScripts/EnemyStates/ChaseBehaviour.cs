@@ -15,7 +15,7 @@ public class ChaseBehaviour : EnemyBehaviour
     {
         moveSpeedCoef = 1f;
 
-        agent.speed = moveSpeed * moveSpeedCoef;
+        agent.speed = _moveSpeed * moveSpeedCoef;
 
         Debug.Log("Entered Patrol");
 

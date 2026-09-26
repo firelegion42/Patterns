@@ -13,8 +13,12 @@ public class Settings : ScriptableObject
     [Header("PlayerStats")]
      public int jumpForce;
      public LayerMask groundMask;
-     public float movementSpeed;
+     public float playerMovementSpeed;
      public GameObject bullet;
      public float bulletSpeed;
+
+    [Header("EnemyStats")]
+    public float searchRadius;
+    public float enemyMovementSpeed;
 
 }

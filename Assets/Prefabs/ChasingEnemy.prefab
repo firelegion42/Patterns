@@ -256,7 +256,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  moveSpeed: 0
+  moveSpeed: 4
   agent: {fileID: 8428902413222995249}
   _player: {fileID: 0}
   _radius: 10
@@ -285,9 +285,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  hideTargets:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &5425333964710163432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,10 +321,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  moveSpeed: 0
+  moveSpeed: 4
   agent: {fileID: 8428902413222995249}
   _player: {fileID: 0}
   _radius: 10
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}

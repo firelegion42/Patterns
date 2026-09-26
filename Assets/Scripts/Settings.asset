@@ -19,6 +19,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 16
-  movementSpeed: 4
+  playerMovementSpeed: 5
   bullet: {fileID: 1942327345127309288, guid: 8213f4e7f90a894439e51d10315c313f, type: 3}
   bulletSpeed: 10
+  searchRadius: 10
+  enemyMovementSpeed: 4
