@@ -9,6 +9,7 @@ public class PlayerHealth : Health, IDamageable, IHealable
     {
         _maxHealth = settings.playerMaxHealth;
         _currentHealth = _maxHealth;
+        Debug.Log("CurrentHealth" + _currentHealth);
     }
     
 
